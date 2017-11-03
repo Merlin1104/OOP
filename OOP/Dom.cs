@@ -8,7 +8,7 @@ namespace OOP
 {
     class Dom
     {
-        private string nazov, typ, poschodie;
+        protected string nazov, typ, poschodie;
         private int obytneMiestnosti;
         private float uzitkovaPlocha, zastavanaPlocha;
 
@@ -22,6 +22,19 @@ namespace OOP
             this.obytneMiestnosti = obytneMiestnosti;
             this.uzitkovaPlocha = uzitkovaPlocha;
             this.zastavanaPlocha = zastavanaPlocha;
+        }
+
+       
+
+        public void PoskytniInformace()
+        {
+            Console.WriteLine("Parametre domu: ");
+            Console.WriteLine("Nazov: {0} \nTyp: {1} \nPoschodie: {2} ", nazov,typ,poschodie);
+        }
+
+        public float ZistiVyuzitelnostZastavanejPlochy()
+        {
+            return zastavanaPlocha / uzitkovaPlocha  * 100;
         }
     }
 
